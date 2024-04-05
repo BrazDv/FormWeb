@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitação de Férias</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .container {
+      margin-top: 50px;
+    }
+    label {
+      font-weight: bold;
+    }
+    .campo-colorido {
+      color: #5c7d66;
+    }
+    input#inicio,
+    input#dias,
+    input#final_ferias,
+    input#abono,
+    input#colaborador,
+    input#data {
+      border: 1px solid #5c7d66;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex align-items-center">
+        <h2 style="color: #3d8cba;"><i class="fas fa-calendar-alt mr-2" style="color: #3d8cba;"></i>Solicitação de Férias</h2>
+      </div>
+    </div>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="colaborador" class="campo-colorido">Colaborador:</label>
+          <input type="text" class="form-control" id="colaborador" placeholder="Digite o nome do colaborador">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="data" class="campo-colorido">Data:</label>
+          <input type="date" class="form-control" id="data">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="status">Status:</label>
+          <input type="text" class="form-control" id="status" value="Solicitado" disabled>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="departamento">Departamento:</label>
+          <input type="text" class="form-control" id="departamento" placeholder="Digite o departamento">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="centro_custo">Centro de Custo:</label>
+          <input type="text" class="form-control" id="centro_custo" placeholder="Digite o centro de custo">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="unidade_negocio">Unidade de Negócio:</label>
+          <input type="text" class="form-control" id="unidade_negocio" placeholder="Digite a unidade de negócio">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inicio" class="campo-colorido">Início</label>
+          <input type="date" class="form-control" id="inicio">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="fim" class="campo-colorido">Fim:</label>
+          <input type="date" class="form-control" id="final_ferias">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="dias_saldo" class="campo-colorido">Dias de Saldo:</label>
+          <input type="number" class="form-control" id="dias_saldo">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="limite" class="campo-colorido">Limite:</label>
+          <input type="date" class="form-control" id="limite">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inicio_ferias" class="campo-colorido">Início das Férias:</label>
+          <input type="date" class="form-control" id="inicio_ferias">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="dias" class="campo-colorido">Dias:</label>
+          <input type="number" class="form-control" id="dias">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="final_ferias" class="campo-colorido">Final das Férias:</label>
+          <input type="date" class="form-control" id="final_ferias">
+        </div>
+        <div class="form-group col-md-3 d-flex align-items-end">
+          <label for="abono" class="campo-colorido mr-2">Abono:</label>
+          <input type="text" class="form-control" id="abono" placeholder="Digite o abono">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="decimo_terceiro" class="campo-colorido">1ª parcela do 13º salário:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="decimo_terceiro" id="sim" value="sim">
+            <label class="form-check-label" for="sim">Sim</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="decimo_terceiro" id="nao" value="nao">
+            <label class="form-check-label" for="nao">Não</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min
